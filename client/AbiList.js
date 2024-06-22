@@ -27,3 +27,5 @@ const routerABI = [
   // Returns: An array of amounts representing the output at each stage of the swap, ending with the final output amount.
   "function getAmountsOut(uint amountIn, address[] memory path) public view virtual override returns (uint[] memory amounts)",
 ];
+
+module.exports = { erc20ABI, factoryABI, pairABI, routerABI };

@@ -27,3 +27,9 @@ view UniswapV2Pair ABI: https://docs.uniswap.org/contracts/v2/reference/smart-co
 create AbiList.js in ./client/
 find source code from bscscan by contract address
 we can get ABI from source code or doc of pancakeswap
+
+## Connecting to Our First Smart Contract
+
+edit GetPrices.js
+BSC JSON-RPC Endpoint: https://docs.bnbchain.org/bnb-smart-chain/developers/rpc/
+run: $ node client/GetPrices.js
