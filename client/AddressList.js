@@ -5,6 +5,7 @@ const addressTo = "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c"; // WBNB
 const addressCake = "0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82"; // CAKE
 const addressPancakePairOfCakeAndWbnb =
   "0x0eD7e52944161450477ee417DE9Cd3a859b14fD0";
+const pancakePancakePair = "0x0eD7e52944161450477ee417DE9Cd3a859b14fD0"; // CAKE to WBNB
 
 module.exports = {
   addressFactory,

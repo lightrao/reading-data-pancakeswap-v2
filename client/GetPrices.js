@@ -34,7 +34,26 @@ const getPrices = async (amountInHuman) => {
   const decimals = await contractToken.decimals();
   //   console.log(decimals);
   const amountIn = ethers.utils.parseUnits(amountInHuman, decimals).toString();
-  console.log(amountIn); // In Wei
+  //   console.log(amountIn); // In Wei
+
+  // Get amounts out
+  const amountsOut = await contractRouter.getAmountsOut(amountIn, [
+    addressFrom, // BUSD
+    addressTo, // WBNB
+  ]);
+  //   console.log(amountsOut);
+
+  // Convert amount out - decimals
+  const contractToken2 = new ethers.Contract(addressTo, erc20ABI, provider);
+  const decimals2 = await contractToken2.decimals();
+  //   console.log(decimals2);
+
+  // Convert amount out - human readable
+  const amountOutHuman = ethers.utils.formatUnits(
+    amountsOut[1].toString(),
+    decimals2
+  );
+  console.log(amountOutHuman);
 };
 
 const amountInHuman = "500";

@@ -33,3 +33,7 @@ we can get ABI from source code or doc of pancakeswap
 edit GetPrices.js
 BSC JSON-RPC Endpoint: https://docs.bnbchain.org/bnb-smart-chain/developers/rpc/
 run: $ node client/GetPrices.js
+
+## Reading Price Information From PancakeSwap
+
+use getAmountsOut function
